@@ -23,6 +23,10 @@ DEPENDENT_DEDUCTION = 4400000
 def gross_to_net(
     gross_salary: int, dependents_count: int, insurance_salary: int, region: Region
 ) -> int:
+
+    if not isinstance(region, Region) or region not in regional_min_salary:
+        raise ValueError("Invalid region")
+
     if not (
         0 <= gross_salary <= MAX_INT
         and 0 <= dependents_count <= MAX_DEPENDENTS
@@ -58,4 +62,4 @@ def gross_to_net(
     if taxable_salary > 80000000:
         total_tax += 0.35 * (taxable_salary - 80000000)
 
-    return gross_salary - total_insurance - total_tax
+    return round(gross_salary - total_insurance - total_tax)
