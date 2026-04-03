@@ -1,5 +1,5 @@
 import unittest
-from gross_to_net import gross_to_net, Region
+from BT1.gross_to_net_pre_2026 import gross_to_net, Region
 
 class TestGrossToNetBoundary(unittest.TestCase):
     """ Kiem thu gia tri bien """
