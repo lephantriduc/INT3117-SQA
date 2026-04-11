@@ -2,7 +2,7 @@ import unittest
 from gross_to_net.gross_to_net_post_2026 import gross_to_net, Region
 
 class TestGrossToNetC2(unittest.TestCase):
-    """ Kiem thu voi do do C2 """
+    """ Kiểm thử với độ đo C2 """
 
     def test_c2_01(self):
         with self.assertRaises(ValueError):

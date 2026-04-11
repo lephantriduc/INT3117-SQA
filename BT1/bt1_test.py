@@ -2,7 +2,7 @@ import unittest
 from gross_to_net.gross_to_net_pre_2026 import gross_to_net, Region
 
 class TestGrossToNetBoundary(unittest.TestCase):
-    """ Kiem thu gia tri bien """
+    """ Kiểm thử giá trị biên """
 
     def test_bva_01(self):
         with self.assertRaises(ValueError):
@@ -85,7 +85,7 @@ class TestGrossToNetBoundary(unittest.TestCase):
         self.assertEqual(gross_to_net(30000000, 2, 4960001, Region.I), 28761280)
 
 class TestGrossToNetDecisionTable(unittest.TestCase):
-    """ Kiem thu bang quyet dinh """
+    """ Kiểm thử bảng quyết định """
 
     def test_dt_01(self):
         with self.assertRaises(ValueError):

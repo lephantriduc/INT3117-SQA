@@ -2,7 +2,7 @@ import unittest
 from gross_to_net.gross_to_net_post_2026 import gross_to_net, Region
 
 class TestGrossToAllUses(unittest.TestCase):
-    """ Kiem thu voi do do all-uses """
+    """ Kiểm thử với độ đo all-uses """
 
     def test_au_01(self):
         with self.assertRaises(ValueError):
