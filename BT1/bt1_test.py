@@ -1,5 +1,5 @@
 import unittest
-from BT1.gross_to_net_pre_2026 import gross_to_net, Region
+from gross_to_net.gross_to_net_pre_2026 import gross_to_net, Region
 
 class TestGrossToNetBoundary(unittest.TestCase):
     """ Kiem thu gia tri bien """
@@ -96,7 +96,6 @@ class TestGrossToNetDecisionTable(unittest.TestCase):
             gross_to_net(25000000, 20, 3000000, Region.II)
 
     def test_dt_03(self):
-        # Region 'IIII' is invalid
         with self.assertRaises(ValueError):
             gross_to_net(4000000, 2, 4000000, 'IIII')
 

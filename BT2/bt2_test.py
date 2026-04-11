@@ -1,5 +1,5 @@
 import unittest
-from gross_to_net_post_2026 import gross_to_net, Region
+from ..gross_to_net.gross_to_net_post_2026 import gross_to_net, Region
 
 class TestGrossToNetC2(unittest.TestCase):
     """ Kiem thu voi do do C2 """

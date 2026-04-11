@@ -59,10 +59,10 @@ def gross_to_net(
     return round(gross_salary - total_insurance - total_tax)
 
 if __name__ == "__main__":
-    gross = 20_000_000
-    dep = 99 
-    region = Region.IV
-    ins = 7100000
+    gross = 130_000_000
+    dep = 2 
+    region = Region.III
+    ins = regional_min_salary[region]
     print(f"ins: {ins}")
     print(gross_to_net(gross, dep, ins, region))
     
