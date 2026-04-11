@@ -43,7 +43,6 @@ def gross_to_net(
 
     taxable_salary = max(0, gross_salary - total_insurance - total_deduction)
 
-    print(taxable_salary)
     total_tax = 0
     if taxable_salary > 0:
         total_tax += 0.05 * (min(taxable_salary, 10000000))
@@ -57,12 +56,3 @@ def gross_to_net(
         total_tax += 0.35 * (taxable_salary - 100000000)
 
     return round(gross_salary - total_insurance - total_tax)
-
-if __name__ == "__main__":
-    gross = 130_000_000
-    dep = 2 
-    region = Region.III
-    ins = regional_min_salary[region]
-    print(f"ins: {ins}")
-    print(gross_to_net(gross, dep, ins, region))
-    
