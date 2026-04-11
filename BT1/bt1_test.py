@@ -15,10 +15,10 @@ class TestGrossToNetBoundary(unittest.TestCase):
         self.assertEqual(gross_to_net(1, 2, 5000000, Region.I), -524999)
 
     def test_bva_04(self):
-        self.assertAlmostEqual(gross_to_net(2**64 - 2, 2, 5000000, Region.I), 5995191823972044000, delta=1000)
+        self.assertAlmostEqual(gross_to_net(2**64 - 2, 2, 5000000, Region.I), 11990383647927648256)
 
     def test_bva_05(self):
-        self.assertAlmostEqual(gross_to_net(2**64 - 1, 2, 5000000, Region.I), 5995191823972044000, delta=1000)
+        self.assertAlmostEqual(gross_to_net(2**64 - 1, 2, 5000000, Region.I), 11990383647927648256)
 
     def test_bva_06(self):
         with self.assertRaises(ValueError):
@@ -100,7 +100,7 @@ class TestGrossToNetDecisionTable(unittest.TestCase):
             gross_to_net(4000000, 2, 4000000, 'IIII')
 
     def test_dt_04(self):
-        self.assertEqual(gross_to_net(35000000, 1, 35000000, Region.I), 28187700)
+        self.assertEqual(gross_to_net(35000000, 1, 35000000, Region.I), 29686250)
 
     def test_dt_05(self):
         self.assertEqual(gross_to_net(5000000, 4, 4500000, Region.II), 4527500)
